@@ -1,0 +1,94 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="style/foundation.css" />    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet" />
+    <link rel="stylesheet" href="style/style.css" />
+    <meta charset="utf-8" />
+    <title>
+        Audify - Keep Listening
+    </title>
+</head>
+
+<body>
+    <section class="header-wrapper">
+        <div class="header row">
+            <div class="large-9 columns">
+                <h1 class="title" amplitude-song-info="name"></h1>
+                <p class="details" amplitude-song-info="artist"></p>
+            </div>
+            <div class="large-3 columns">
+                <a href="" class="btn">
+                    <i class="fa fa-heart-o favorite"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="album-art">
+        <img alt="Album art" amplitude-song-info="cover"/>
+    </section>
+    <section class="controls-wrapper">
+        <div class="time-controller">
+            <div class="large-2 columns">
+                <div class="time-elapsed">
+                   
+                    <span class="amplitude-current-minutes" amplitude-single-current-minutes="true">0</span>:<span class="amplitude-current-seconds" amplitude-single-current-seconds="true">00</span>
+                    
+                </div>
+            </div>
+            <div class="large-8 columns">
+                <div class="time-slider">
+                    <input type="range" class="amplitude-song-slider" amplitude-singular-song-slider="true" value="0" />
+                </div>
+            </div>
+            <div class="large-2 columns">
+                <div class="song-duration">
+                    
+                    <span class="amplitude-duration-minutes" amplitude-single-duration-minutes="true">0</span>:<span class="amplitude-duration-seconds" amplitude-single-duration-seconds="true">00</span>
+                    
+                </div>
+            </div>
+        </div>
+        <br/>
+        <br/>
+        <div class="player-controls">
+            <a class="btn amplitude-repeat"><i class="fa fa-repeat"></i></a>
+            <a class="btn ampltiude-prev"><i class="fa fa-chevron-left"></i></a>
+            <a class="btn amplitude-play-pause amplitude-paused"><i class="fa fa-play"></i></a>
+            <a class="btn amplitude-next"><i class="fa fa-chevron-right"></i></a>
+            <a class="btn amplitude-shuffle"><i class="fa fa-random"></i></a>
+        </div>
+    </section>
+
+
+   <script type="text/javascript" src="js/amplitude.min.js"></script>
+   <script>
+       Amplitude.init({
+            "songs": [
+                {
+                    "name": "Closer",
+                    "artist": "The Chainsmokers ft. Hasley",
+                    "album": "Closer",
+                    "url": "songs/song-1.mp3",
+                    "cover_art_url": "res/cover-1.jpg"
+                            },
+                {
+                    "name": "Mai Rahu Ya Na Rahu",
+                    "artist": "Armaan Malik",
+                    "album": "Mai Rahu Ya Na Rahu",
+                    "url": "songs/song-2.mp3"
+                            },
+                {
+                    "name": "Rap God",
+                    "artist": "Eminem",
+                    "album": "-",
+                    "url": "songs/song-3.mp3"
+                            }
+                    ],
+           "default_album_art": "res/no-cover.jpg"
+       });
+   </script>
+</body>
+
+</html>

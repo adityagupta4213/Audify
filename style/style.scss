@@ -1,0 +1,66 @@
+$base: #CD0B62;
+$black: #2a2a2a;
+body {
+    width: 480px;
+    margin: 2rem auto;
+    background: radial-gradient(black, gray);
+}
+
+body, p, h1, a{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.header-wrapper {
+    padding: 1rem;
+    background-color: $base;
+    .columns:nth-child(1) {
+        width: 70%;
+    }
+    .columns:nth-child(2) {
+        width: 30%;
+    }
+    h1,
+    p,
+    .favorite {
+        color: white;
+    }
+    h1 {
+        font-size: 3rem;
+    }
+    .favorite {
+        margin-top: 1rem;
+        float: right;
+        font-size: 2rem;
+    }
+}
+
+.controls-wrapper {
+    padding: 1rem;
+    background-color: white;
+    .large-2 {
+        width: 10%;
+    }
+    .large-8 {
+        width: 80%;
+    }
+    .time-elapsed {
+        color: $base;
+    }
+    .song-duration {
+        color: $black;
+    }
+    .time-controller {
+        input[type="range"] {
+            width: 100%
+        }
+    }
+    .player-controls {
+        margin: 0 1rem;
+        text-align: center;
+        a {
+            padding: 1.5rem;
+            font-size: 1.5rem;
+            color: $base;
+        }
+    }
+}
